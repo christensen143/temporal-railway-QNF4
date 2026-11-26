@@ -4,9 +4,9 @@
 # the plain temporalio/server image plus schema management with the
 # admin-tools binaries. auto-setup is deprecated and not used.
 # Server and admin-tools tags must match.
-FROM temporalio/admin-tools:1.32.1 AS admintools
+FROM temporalio/admin-tools:1.32.2 AS admintools
 
-FROM temporalio/server:1.32.1
+FROM temporalio/server:1.32.2
 
 # temporal-sql-tool + versioned SQL schemas, used by the Railway pre-deploy
 # command to create/upgrade the databases before every deployment.
