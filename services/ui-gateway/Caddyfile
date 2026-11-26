@@ -16,11 +16,6 @@
 		respond "ok" 200
 	}
 
-	# Public, versioned UI bundles. Module imports fail behind basic auth.
-	handle /_app/immutable/* {
-		reverse_proxy {$UPSTREAM_URL}
-	}
-
 	handle {
 		basic_auth {
 			{$BASIC_AUTH_USERNAME} {$BASIC_AUTH_HASH}
